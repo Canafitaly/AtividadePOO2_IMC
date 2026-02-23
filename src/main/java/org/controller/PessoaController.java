@@ -1,9 +1,9 @@
-package controller;
+package org.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import model.Pessoa;
+import org.model.Pessoa;
 
 public class PessoaController {
 

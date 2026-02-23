@@ -1,4 +1,4 @@
-package model;
+package org.model;
 
 public class Pessoa {
     private String nome, saude, cpf;

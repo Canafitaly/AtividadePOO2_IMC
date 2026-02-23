@@ -1,4 +1,4 @@
-package inicializacao;
+package org.view;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Tela.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/Tela.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.setTitle("Cadastro de Pessoa - IMC");
