@@ -3,10 +3,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import org.model.Arquivo;
 import org.model.Pessoa;
+
+import java.io.IOException;
 
 public class PessoaController {
 
+    Pessoa pessoa;
     //entradas
     @FXML
     private TextArea TextAltura;
@@ -22,6 +26,8 @@ public class PessoaController {
     //reativos
     @FXML
     private Button BotaoCalcular;
+    @FXML
+    private Button CriarArquivo;
 
     //saidas
     @FXML
@@ -41,7 +47,7 @@ public class PessoaController {
             double peso=Double.parseDouble(TextPeso.getText());
             int idade=Integer.parseInt(TextIdade.getText());
 
-            Pessoa pessoa = new Pessoa(nome, altura, peso, idade, cpf);
+            pessoa = new Pessoa(nome, altura, peso, idade, cpf);
 
             SaidaNome.setText("Nome: " + pessoa.getNome() + " | CPF: " + cpf);
             SaidaResultado.setText("Idade: " + pessoa.getIdade() + " anos");
@@ -49,7 +55,16 @@ public class PessoaController {
                     " → " + pessoa.getSaude());
         }catch (NumberFormatException e) {
              SaidaResultado.setText("Erro: altura, peso e idade devem ser números!");
-    }
+        }
 
-}
+    }
+    @FXML
+    private void criarArquivo(){
+        try{
+            Arquivo arquivo =new Arquivo("PessoaIMC.txt",pessoa.getNome(),pessoa.getSaude(),pessoa.getPeso(),pessoa.getAltura(), pessoa.getImc(), pessoa.getIdade());
+            SaidaResultado.setText("Arquivo criado com sucesso");
+        }catch (NumberFormatException | IOException e) {
+            SaidaResultado.setText("problema na criação do arquivo");
+        }
+    }
 }

@@ -1,0 +1,6 @@
+Nome pedro
+Saude saldavel
+peso 61.0
+altura 1.7
+IMC 21.107266435986162
+idade 21
