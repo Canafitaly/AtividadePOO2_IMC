@@ -1,6 +1,6 @@
-Nome pedro
-Saude saldavel
-peso 61.0
-altura 1.7
-IMC 21.107266435986162
-idade 21
+
+
+nome; saude; peso; altura; imc; idade
+pedro; saldavel; 61.0; 1.74; 20.147971991015986; 21
+Sandra; saldavel; 60.0; 1.65; 22.03856749311295; 6
+test4; magra; 30.0; 1.8; 9.25925925925926; 123
